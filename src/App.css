@@ -1,0 +1,162 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --primary-color: #008cff; /* Warna logo utama */
+    --secondary-color: #006bb3; /* Warna logo tambahan */
+    --text-color: #343a40;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --hover-color: #e0f2ff; /* Warna efek hover yang lembut */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 1600px;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.title-box {
+    background: linear-gradient(135deg, #e0f2ff, #b3d7ff);
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.title-box h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.category-box {
+    background: #ffffff;
+    border: 2px solid var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.category-box h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.category {
+    margin-bottom: 60px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    max-width: 650px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-color);
+}
+
+.product-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.product-details h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-box h1 {
+        font-size: 4rem;
+    }
+}
